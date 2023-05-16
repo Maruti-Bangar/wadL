@@ -1,5 +1,5 @@
-import express from "express";
-import cors from "cors";
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
@@ -22,9 +22,11 @@ app.post("/login", (req, res) => {
         });
         if(flag){
             res.send("success");
+            console.log("success");
         }
         else{
             res.send("invalid user");
+            console.log("invalid user");
         }
     }
     catch(error){
